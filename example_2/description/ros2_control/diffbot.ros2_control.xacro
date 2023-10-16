@@ -13,8 +13,11 @@
       </xacro:unless>
       <xacro:if value="${use_mock_hardware}">
         <hardware>
+          <!--
           <plugin>mock_components/GenericSystem</plugin>
           <param name="calculate_dynamics">true</param>
+          -->
+          <plugin>ign_ros2_control/IgnitionSystem</plugin>
         </hardware>
       </xacro:if>
       <joint name="${prefix}left_wheel_joint">
